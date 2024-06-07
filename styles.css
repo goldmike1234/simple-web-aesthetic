@@ -1,0 +1,109 @@
+/*
+    This simple website design was made by https://github.com/goldmike1234.
+    You can use this code for your own website, edit it, or do whatever you want with it.
+    If you have any questions regarding the website, feek free to contact me on my social media.
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 3px #ffffff;
+    position: relative;
+}
+
+h1::before {
+    content: "goldmike";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: #000000;
+    border-right: 8px solid #000000;
+    transition: 1s ease-in-out;
+}
+
+h1:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px #13a813);
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+#play-music {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+}
+
+#play-music:hover #play-icon, #play-music:hover #play-label {
+    transform: scale(1.2);
+}
+
+#play-icon, #play-label {
+    transition: transform 0.3s;
+}
+
+#play-icon {
+    width: 50px;
+    height: 50px;
+}
+
+#play-label {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
